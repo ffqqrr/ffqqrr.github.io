@@ -556,12 +556,7 @@ main {
 
 .passage {
   max-width: 1024px;
-  margin: 20px auto; 
-transition: all .3s ease;
-  background: white;
-  width: 100%;
-  padding: 60px 60px 40px;
-  border-radius: 10px; }
+  margin: 20px auto; }
   .passage-article {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
