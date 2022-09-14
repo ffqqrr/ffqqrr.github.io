@@ -16,7 +16,7 @@ body, input, label, select, option, textarea, button, fieldset, legend {
 body {
   margin: 0;
   padding: 0;
-  background: #FAFAFA; }
+  background: #e7fafa; }
 
 a {
   color: #212121;
@@ -59,14 +59,15 @@ main {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 50px;
-  background: #F5F5F5;
+  width: 0%;
+  height: 0px;
+  background: #F1F1F1;
   overflow: auto;
   z-index: 300; }
   .bottom-bar-left, .bottom-bar-right {
     display: inline-flex;
-    align-items: center; }
+    align-items: center; 
+}
   .bottom-bar a {
     display: inline-block;
     width: 40px;
@@ -178,7 +179,7 @@ main {
     line-height: 1.5;
     padding: 5px 30px 5px 10px;
     color: #212121;
-    background-color: #FAFAFA;
+    background-color: #defffc;
     background-image: none;
     border: 1px solid #EEEEEE;
     border-radius: 4px;
@@ -335,7 +336,7 @@ main {
   left: 0;
   width: 100%;
   height: 60px;
-  border-bottom: #FAFAFA solid 2px;
+  border-bottom: #defffc solid 2px;
   padding-left: 10px;
   background: #FAFAFA;
   z-index: 300; }
@@ -345,7 +346,7 @@ main {
       box-shadow: 0 2px 2px #ECEFF1; } }
   @media screen and (max-width: 768px) {
     .site-header {
-      background: #F5F5F5; } }
+      background: #455a64; } }
   .site-header-brand, .site-header-right {
     display: flex;
     align-items: center; }
@@ -378,6 +379,7 @@ main {
       transition: all .3s linear; }
       .site-header-navigation a:hover {
         color: #616161; }
+
   .site-header-btn {
     font-size: 18px;
     display: flex;
@@ -429,8 +431,8 @@ main {
   z-index: 300; }
 
 .site-footer-wrapper {
-  background: #455A64;
-  margin-bottom: 50px;
+  background: #F1F1F1;
+  margin-bottom: 0px;
   word-break: break-all; }
 
 .site-footer {
@@ -447,7 +449,7 @@ main {
     .site-footer {
       padding: 30px 50px 30px; } }
   .site-footer a {
-    color: #EEEEEE;
+    color: #3498db;
     transition: all .15s linear; }
     .site-footer a:hover {
       color: white; }
@@ -460,16 +462,18 @@ main {
       .site-footer-col {
         width: 50%; } }
     .site-footer-col h5 {
-      margin-bottom: 15px;
+      margin-bottom: 0px;
       font-size: 1.1em;
       color: #CFD8DC; }
     .site-footer-col span {
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
       font-weight: bold; }
   .site-footer-info {
     width: 100%;
-    color: #CFD8DC; }
+    color: #000000;
+   
+ }
     .site-footer-info:not(:last-child) {
       margin-bottom: 5px; }
 
@@ -552,7 +556,12 @@ main {
 
 .passage {
   max-width: 1024px;
-  margin: 20px auto; }
+  margin: 20px auto; 
+transition: all .3s ease;
+  background: white;
+  width: 100%;
+  padding: 60px 60px 40px;
+  border-radius: 10px; }
   .passage-article {
     font-size: 16px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -645,7 +654,7 @@ main {
       border-radius: 4px 4px 0 0;
       margin: 16px 0; }
       .passage-article > table thead {
-        background: #F5F5F5; }
+        background: #455a64; }
         .passage-article > table thead th {
           padding: 16px;
           border-bottom: 1px solid #EEEEEE; }
