@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>FQR_的博客</title>
+  
+  <subtitle>FQR_的博客</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-09-13T09:31:05.390Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>FQR_</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/09/13/hello-world/"/>
+    <id>http://example.com/2022/09/13/hello-world/</id>
+    <published>2022-09-13T09:19:17.070Z</published>
+    <updated>2022-09-13T09:31:05.390Z</updated>
+    
+    <content type="html"><![CDATA[<p>开始使用 <script type="math/tex">\texttt{hexo}</script> 啦！！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;开始使用 &lt;script type=&quot;math/tex&quot;&gt;\texttt{hexo}&lt;/script&gt; 啦！！&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
