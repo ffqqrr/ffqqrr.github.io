@@ -346,7 +346,7 @@ main {
       box-shadow: 0 2px 2px #ECEFF1; } }
   @media screen and (max-width: 768px) {
     .site-header {
-      background: #455a64; } }
+      background: #FAFAFA; } }
   .site-header-brand, .site-header-right {
     display: flex;
     align-items: center; }
@@ -654,7 +654,7 @@ transition: all .3s ease;
       border-radius: 4px 4px 0 0;
       margin: 16px 0; }
       .passage-article > table thead {
-        background: #455a64; }
+        background: #FAFAFA; }
         .passage-article > table thead th {
           padding: 16px;
           border-bottom: 1px solid #EEEEEE; }
