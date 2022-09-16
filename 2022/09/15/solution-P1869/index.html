@@ -153,7 +153,8 @@
   </h1>
   
   <article class="passage-article">
-    <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于每一行，我们可以将它设置为一个状态。</p>
+    <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1896">题目传送门</a></p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于每一行，我们可以将它设置为一个状态。</p>
 <p>比如这一行：</p>
 <p><img src="https://tuchuangs.com/imgs/2022/09/15/91e1134fa0497c81.jpg" alt=""></p>
 <p>（红的是国王，白的为空）</p>
@@ -190,7 +191,7 @@
 <p>再将 $s1$ 与 左移一位的$s2$ 对齐。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1：      s1[1] s1[2] s1[3]...</span><br><span class="line">s2：s2[1] s2[2] s2[3] s2[4]...</span><br></pre></td></tr></table></figure>
 <p>此时 $s1_i$ 与 $s2_{i+1}$ 对齐</p>
-<p>将 $s1$ 与 左移一位的$s2$ 进行按位与运算。如果返回值为 $0$，就说明不存在 $s1_i$ 与 $s2_{i+1}$ 都为 $1$。。</p>
+<p>将 $s1$ 与 左移一位的$s2$ 进行按位与运算。如果返回值为 $0$，就说明不存在 $s1_i$ 与 $s2_{i+1}$ 都为 $1$。</p>
 <p>&nbsp;</p>
 <p>最后将 $s1$ 与 右移一位的$s2$ 对齐。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1：s1[1] s1[2] s1[3] s1[4]...</span><br><span class="line">s2：      s2[1] s2[2] s2[3]...</span><br></pre></td></tr></table></figure>
