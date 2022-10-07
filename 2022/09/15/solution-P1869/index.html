@@ -1,159 +1,193 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="FQR_" />
-  
   
   <title>P1869 互不侵犯 题解 | FQR_的博客</title>
 
+  <!-- keywords -->
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="P1869 互不侵犯 题解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P1869 互不侵犯 题解">
+<meta property="og:url" content="http://example.com/2022/09/15/solution-P1869/index.html">
+<meta property="og:site_name" content="FQR_的博客">
+<meta property="og:description" content="P1869 互不侵犯 题解">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tuchuangs.com/imgs/2022/09/15/91e1134fa0497c81.jpg">
+<meta property="article:published_time" content="2022-09-14T16:31:54.367Z">
+<meta property="article:modified_time" content="2022-10-07T13:54:12.606Z">
+<meta property="article:author" content="FQR_">
+<meta property="article:tag" content="状态压缩">
+<meta property="article:tag" content="动态规划">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tuchuangs.com/imgs/2022/09/15/91e1134fa0497c81.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="FQR_的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
   
-    <meta name="keywords" content="题解,状态压缩,动态规划," />
   
 
   
-  <meta name="description" content="FQR_ 的博客">
+<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
 
   
-
-  
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
-  
-
-  
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-  
-
-  
-
-  
-
-  <script>
-  // theme-ad's config script
-  // it can be used in every script
-  
-  window.AD_CONFIG = {
-    leancloud: {"appid":"Hyq9wkH495DgNHWhDQCOfQSp-gzGzoHsz","appkey":"WaR7nrzhliHj9aVwdQzkdlGd","comment":false,"count":true},
-    welcome: {"enable":true,"interval":30},
-    start_time: "2022-09-14",
-    passwords: ["efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec", ],
-    is_post: true,
-    lock: false,
-    author: "FQR_",
-    share: {"qq":true,"wechat":true},
-    mathjax: true,
-    page_type: "",
-    root: "/"
-  };
-</script>
-
-  
-<script src="/vendor/sha256.min.js"></script>
-<script src="/js/auth.js"></script>
-<script src="/js/index.js"></script>
-<script src="/vendor/qrcode.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 
   
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/touch-icon.png">
-  
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+  <div id="container">
+    <div id="particles-js"></div>
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			
+		</a>
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<hgroup>
+			<h1 class="header-author"><a href="/">FQR_</a></h1>
+		</hgroup>
 
-  
-<link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/styles/components/highlight/highlight.css">
+		
+			<p class="header-subtitle"></p>
+		
 
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">归档</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="half-header-menu">
+						<a class="hide">Home</a>
+						<a>Tags</a>
+						<a>Links</a>
+						<a>About</a>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+						</div>
+						<!-- music -->
+						
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" style="font-size: 10px;">动态规划</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/" style="font-size: 10px;">状态压缩</a>
+					</div>
+				</section>
+				
+				
+				
 
-  
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="FQR_的博客" type="application/atom+xml">
-</head>
-  <body>
-    <header class="site-header">
-  <div class="site-header-brand">
-    
-      <span class="site-header-brand-title">
-        <a href="/">Blog</a>
-      </span>
-    
-    
-      <span class="site-header-brand-motto"> | FQR_ 的博客</span>
-    
-  </div>
-  <div class="site-header-right">
-    <nav class="site-header-navigation">
-      
-        <a href="/" target="_self">首页</a>
-      
-        <a href="/archives/" target="_self">归档</a>
-      
-    </nav>
-    <div class="site-header-btn">
-      
-        <a href="https://github.com/ffqqrr/" target="_blank" id="site-github">
-          <i class="fa fa-github-alt"></i>
-        </a>
-      
-      <a href="javascript:void(0);" id="site-search">
-        <i class="fa fa-search"></i>
-      </a>
-      <a href="javascript:void(0);" id="site-nav-btn">
-        <i class="fa fa-ellipsis-v"></i>
-      </a>
+				
+			</div>
+		</div>
+	</header>				
+</div>
     </div>
-  </div>
-</header>
-<nav class="table-content" id="site-nav">
-  <div class="table-content-title">
-    <span>导航</span>
-  </div>
-  <div class="table-content-main">
-    <ol class="toc">
-      
-        <li class="toc-item">
-          <a href="/" target="_self">
-            首页
-          </a>
-        </li>
-      
-        <li class="toc-item">
-          <a href="/archives/" target="_self">
-            归档
-          </a>
-        </li>
-      
-    </ol>
-  </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide"></h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author"></h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">归档</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+				</div>
+			</nav>
+		</header>				
+	</div>
 </nav>
-<div id="site-process"></div>
-    <main>
-      
-  <div class="passage">
-  <div class="passage-meta">
-    <span>
-      <i class="fa fa-calendar"></i>2022-09-15
-    </span>
-    
-      <span>
-        | <a href="/categories/%E9%A2%98%E8%A7%A3/"><i class="fa fa-bookmark"></i>题解</a>
-      </span>
-    
-    
-      <span>
-        | <i class="fa fa-unlock-alt"></i>UNLOCK
-      </span>
-    
-  </div>
-  <h1 class="passage-title">
-    P1869 互不侵犯 题解
-  </h1>
+      <div class="body-wrap"><article id="post-solution-P1869" class="article article-type-post" itemscope itemprop="blogPost">
   
-  <article class="passage-article">
-    <p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1896">题目传送门</a></p>
+    <div class="article-meta">
+      <a href="/2022/09/15/solution-P1869/" class="article-date">
+  	<time datetime="2022-09-14T16:31:54.367Z" itemprop="datePublished">2022-09-15</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      P1869 互不侵犯 题解
+      
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag">动态规划</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/" rel="tag">状态压缩</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E9%A2%98%E8%A7%A3/">题解</a>
+	</div>
+
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>P1869 互不侵犯 题解</p>
+<span id="more"></span>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1896">题目传送门</a></p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>对于每一行，我们可以将它设置为一个状态。</p>
 <p>比如这一行：</p>
 <p><img src="https://tuchuangs.com/imgs/2022/09/15/91e1134fa0497c81.jpg" alt=""></p>
@@ -199,7 +233,7 @@
 <p>将 $s1$ 与 右移一位的$s2$ 进行按位与运算。如果返回值为 $0$，就说明不存在 $s1_i$ 与 $s2_{i-1}$ 都为 $1$。</p>
 <p>&nbsp;</p>
 <p>如果上面的三个条件都满足，就说明：当 $s1_i=1$ 时，$s2_{i-1}$、$s2_{i}$、$s2{i+1}$ 都不为 $1$ 。</p>
-<p>所以可得，当 <code>(s1&amp;s2==0)&amp;&amp;(s1&amp;(s2&lt;&lt;1))==0)&amp;&amp;((s1&amp;(s2&gt;&gt;1))==0)</code>时，$s1$ 与 $s2$不冲突。</p>
+<p>所以可得，当 <code>(s1&amp;s2==0)&amp;&amp;(s1&amp;(s2&lt;&lt;1))==0)&amp;&amp;((s1&amp;(s2&gt;&gt;1))==0)</code>时，$s1$ 与 $s2$ 不冲突。</p>
 <hr>
 <p>接下来推转移方程式.</p>
 <p>假设 $dp[i][j][k]$ 表示第 $i$ 行，使用了 $j$ 个国王，此行的状态为 $k$ 的方案数。</p>
@@ -209,117 +243,71 @@
 <h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n,k;</span><br><span class="line"><span class="type">int</span> cnt_king[<span class="number">3000</span>];</span><br><span class="line"><span class="type">int</span> dp[<span class="number">10</span>][<span class="number">100</span>][<span class="number">3000</span>];</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; p;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;k;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;(<span class="number">1</span>&lt;&lt;n);i++)<span class="comment">//枚举每一个状态，状态数量为 2^n 个</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> x=i,res=<span class="number">0</span>;<span class="comment">//res:状态为i时，国王的个数</span></span><br><span class="line">        <span class="keyword">while</span>(x)</span><br><span class="line">        &#123;</span><br><span class="line">            x-=(x&amp;-x);<span class="comment">//减去最低位的1</span></span><br><span class="line">            res++;</span><br><span class="line">        &#125;</span><br><span class="line">        cnt_king[i]=res;</span><br><span class="line">        <span class="keyword">if</span>(((i&amp;(i&lt;&lt;<span class="number">1</span>))==<span class="number">0</span>)) p.<span class="built_in">push_back</span>(i);<span class="comment">//判断i是否合法。如果合法，就加入p里</span></span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">    dp[<span class="number">0</span>][<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="comment">//当前是第i行</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;p.<span class="built_in">size</span>();j++)<span class="comment">//枚举当前行的状态</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> s2=p[j];</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> m=<span class="number">0</span>;m&lt;p.<span class="built_in">size</span>();m++)<span class="comment">//枚举上面行的状态</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="type">int</span> s1=p[m];</span><br><span class="line">                <span class="keyword">if</span>(!(((s1&amp;s2)==<span class="number">0</span>)&amp;&amp;((s1&amp;(s2&lt;&lt;<span class="number">1</span>))==<span class="number">0</span>)&amp;&amp;((s1&amp;(s2&gt;&gt;<span class="number">1</span>))==<span class="number">0</span>))) </span><br><span class="line">                    <span class="keyword">continue</span>;<span class="comment">//如果不合法，就直接跳过</span></span><br><span class="line">					</span><br><span class="line">                 <span class="keyword">for</span>(<span class="type">int</span> l=cnt_king[s2];l&lt;=k;l++) <span class="comment">//遍历国王个数</span></span><br><span class="line">                    dp[i][l][s2]+=dp[i<span class="number">-1</span>][l-cnt_king[s2]][s1];<span class="comment">//转移方程</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;p.<span class="built_in">size</span>();i++) ans+=dp[n][k][p[i]];<span class="comment">//将最后一行，国王个数为k，所有状态的方案数相加</span></span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 
-  </article>
-  <aside class="table-content" id="site-toc">
-  <div class="table-content-title">
-    <i class="fa fa-arrow-right fa-lg" id="site-toc-hide-btn"></i>
-    <span>目录</span>
-  </div>
-  <div class="table-content-main">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-text">完整代码</span></a></li></ol>
-  </div>
-</aside>
-  
-  
-    <div class="passage-tags">
-     
-      <a href="/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/"><i class="fa fa-tags"></i>状态压缩</a>
-     
-      <a href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"><i class="fa fa-tags"></i>动态规划</a>
-    
-    </div>
-  
-</div>
-
-    </main>
-    
-    <div class="site-footer-wrapper">
-  <footer class="site-footer">
-    
-    <div class="site-footer-info">
-      <i class="fa fa-clock-o"></i> 本站已稳定运行<span id="site-time"></span>
-    </div>
-    
-      <div class="site-footer-info">
-        <i class="fa fa-paw"></i> 您是本站第 <span id="site-count"></span> 位访客
-      </div>
-    
-    
-    <div class="site-footer-info">
-      <i class="fa fa-copyright"></i> 
-      2019 <a href="https://github.com/dongyuanxin/theme-ad/" target="_blank">Theme-AD</a>.
-      Created by <a href="https://godbmw.com/" target="_blank">GodBMW</a>.
-      All rights reserved.
-    </div>
-  </footer>
-</div>
-    <div id="site-layer" style="display:none;">
-  <div class="site-layer-content">
-    <div class="site-layer-header">
-      <span class="site-layer-header-title" id="site-layer-title"></span>
-      <i class="fa fa-close" id="site-layer-close"></i>
-    </div>
-    <div class="site-layer-body" id="site-layer-container">
-      <div class="site-layer-input" id="site-layer-search" style="display: none;">
-        <div class="site-layer-input-choose">
-          <a href="javascript:void(0);" title="Change Search Engine">Google</a>
-        </div>
-        <input type="text">
-        <i class="fa fa-search"></i>
-      </div>
       
-      <div id="site-layer-welcome" style="display:none;"></div>
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/09/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello hexo</div>
+      <strong class="article-nav-caption">&gt;</strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2022 FQR_
+      </div>
+        <div class="footer-right">
+          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
+        </div>
     </div>
   </div>
-</div>
+</footer>
+    </div>
     
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
-<div class="bottom-bar">
-  <div class="bottom-bar-left">
-    <a href="javascript:void(0);" data-enable="false">
-      <i class="fa fa-arrow-left"></i>
-    </a>
-    <a href="/2022/09/13/hello-world/" data-enable="true">
-      <i class="fa fa-arrow-right"></i>
-    </a>
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+
+<script src="/js/main.js"></script>
+
+
+
+
   </div>
-  <div class="bottom-bar-right">
-    <a href="javascript:void(0);" data-enable="true" id="site-toc-show-btn">
-      <i class="fa fa-bars"></i>
-    </a>
-    
-    <a href="javascript:void(0);" id="site-toggle-share-btn">
-      <i class="fa fa-share-alt"></i>
-    </a>
-    
-    <a href="javascript:void(0);" id="back-top-btn">
-      <i class="fa fa-chevron-up"></i>
-    </a>
-  </div>
-</div>
-    <div id="share-btn">
-  
-  
-  
-  
-    <a id="share-btn-qq" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-qq"></i>
-    </a>
-  
-  
-    <a id="share-btn-wechat" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-wechat"></i>
-    </a>
-  
-</div>
-    
-
-
-
-
-
-    
-  <script type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         tex2jax: {
             inlineMath: [ ["$","$"], ["\\(","\\)"] ],
