@@ -1264,13 +1264,13 @@ a {
 }
 .article-more-link {
   text-align: right;
-  padding-bottom: 20px;
-  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-right: 30px;
 }
 .article-more-link a {
-  background: #4d4d4d;
+  background: #6f6f6f;
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
   padding: 2px 8px 4px;
   line-height: 16px;
   -webkit-border-radius: 2px;
@@ -1282,7 +1282,7 @@ a {
   transition: background 0.3s;
 }
 .article-more-link a:hover {
-  background: #3c3c3c;
+  background: #1a1a1a;
 }
 .article-more-link a.hidden {
   visibility: hidden;
@@ -1571,7 +1571,7 @@ a {
 .article-entry .gist .gist-file .gist-meta {
   background: #272822;
   color: #a6e22e;
-  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 0.85em font-consolas;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -1643,7 +1643,8 @@ pre .javascript .function {
   color: #f92672;
 }
 #footer {
-  font-size: 14px;
+  font-size: 0px;
+  color: rgba(0,0,0,0);
   font-family: Menlo, Monaco, Verdana, monospace;
   text-shadow: 0 1px #fff;
   position: absolute;
@@ -1797,14 +1798,14 @@ pre .javascript .function {
   }
 }
 #header .tagcloud a {
-  color: #fff;
+  color: #000;
 }
 .tagcloud a {
   display: inline-block;
   text-decoration: none;
   font-weight: normal;
   font-size: 10px;
-  color: #581845;
+  color: #000;
   height: 18px;
   line-height: 18px;
   float: left;
@@ -1864,6 +1865,7 @@ pre .javascript .function {
 }
 .tagcloud a.color5 {
   background: #7b5d5f;
+  color: #fff;
 }
 .tagcloud a.color5:before {
   border-right-color: #7b5d5f;
@@ -2116,5 +2118,5 @@ form input.st-search-input_my {
   -webkit-box-shadow: inset 0 1px 3px 0 #e4eba7;
   box-shadow: inset 0 1px 3px 0 #e4eba7;
   outline: none;
-  background: #666 url("/img/search.png") no-repeat 7px 7px;
+  background: #666 url("/img/bg.png") no-repeat 7px 7px;
 }
