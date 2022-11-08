@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-08T07:07:30.085Z</updated>
+  <updated>2022-11-08T07:16:39.021Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>P7633 BRODOVI  题解</title>
+    <link href="http://example.com/2022/11/08/solution-P7633/"/>
+    <id>http://example.com/2022/11/08/solution-P7633/</id>
+    <published>2022-11-08T07:14:59.191Z</published>
+    <updated>2022-11-08T07:16:39.021Z</updated>
+    
+    <content type="html"><![CDATA[<p>摘要：P7633 BRODOVI  题解</p><span id="more"></span><hr><h1><span id="目录">目录</span></h1><ol><li><p><a href="/2022/09/15/solution-P1869/#思路">思路</a></p></li><li><p><a href="/2022/09/15/solution-P1869/#代码">代码</a></p><hr></li></ol><p><a href="/problem/SP8349">题目传送门</a></p><p><a href="/problem/P7633">双倍经验</a></p><h2><span id="思路">思路</span></h2><p>遍历除 $1$ 以外的“娱乐日”。</p><p>如果这个“娱乐日”暂时未被标记，那么就创建一个长度为 $a_i-1$ 的间隔，并将答案加一。</p><p>遍历其它的“娱乐日”。如果这一天属于这个间隔，即这个数减 $1$ 是 $a_i-1$ 的倍数，就将这个数标记。</p><h2><span id="代码">代码</span></h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> a[<span class="number">5050</span>];</span><br><span class="line">map&lt;<span class="type">int</span>,<span class="type">bool</span>&gt; mp;<span class="comment">//mp[i]表示i是否被标记过</span></span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">cin&gt;&gt;n;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cin&gt;&gt;a[i];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)<span class="comment">//遍历除1以外的娱乐日</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(mp[i]) <span class="keyword">continue</span>;<span class="comment">//判断是否被标记过</span></span><br><span class="line">ans++;<span class="comment">//需要创建新的间隔，将答案加一</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;j++) </span><br><span class="line">            <span class="keyword">if</span>((a[j]<span class="number">-1</span>)%(a[i]<span class="number">-1</span>)==<span class="number">0</span>) </span><br><span class="line">                mp[j]=<span class="number">1</span>;<span class="comment">//标记属于这个间隔内的数字</span></span><br><span class="line">&#125;</span><br><span class="line">cout&lt;&lt;ans;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><hr>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;摘要：P7633 BRODOVI  题解&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="题解" scheme="http://example.com/categories/%E9%A2%98%E8%A7%A3/"/>
+    
+    
+    <category term="暴力" scheme="http://example.com/tags/%E6%9A%B4%E5%8A%9B/"/>
+    
+  </entry>
   
   <entry>
     <title>P1869 互不侵犯 题解</title>
