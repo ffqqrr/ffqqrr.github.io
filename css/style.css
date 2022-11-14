@@ -1587,31 +1587,40 @@ a {
   text-decoration: underline;
 }
 pre .type {
-  color: #f92672;
+  color: #c678dd;
 }
 pre .function .title {
   color: #61aeee;
 }
 pre .function .params {
-  color: #a6e22e;
+  color: #abb2bf;
 }
 pre .number {
-  color: #d19a66;
-}
-pre .keyword {
-  color: #61aeee;
-}
-pre .meta {
-  color: #61aeee;
-}
-pre .string {
   color: #98c379;
 }
+pre .keyword {
+  color: #c678dd;
+}
+pre .meta .keyword {
+  color: #c678dd;
+}
+pre .meta .string {
+  color: #98c379;
+}
+pre .meta {
+  color: #c678dd;
+}
+pre .string {
+  color: #8959a8;
+}
 pre .built_in {
-  color: #e6c07b;
+  color: #61aeee;
 }
 pre .comment {
-  color: #b18eb1;
+  color: #5c6370;
+}
+pre .line {
+  color: #abb2bf;
 }
 #footer {
   font-size: 0px;
