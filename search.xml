@@ -8,7 +8,7 @@
       <link href="/2022/11/27/chu-ji-tu-lun/"/>
       <url>/2022/11/27/chu-ji-tu-lun/</url>
       
-        <content type="html"><![CDATA[<p>摘要：初级图论，Dijkstra，待更新</p><span id="more"></span><hr><h1><span id="目录">目录</span></h1><h4><span id="一-单源最短路径问题">一、</span></h4><ol><li><a href="#Dijkstra 算法">Dijkstra 算法</a><ul><li><a href="#大致思路">大致思路</a></li></ul></li></ol><hr><h2><span id="单源最短路径问题">单源最短路径问题</span></h2><p>单元最短路径问题（简称 SSSP）。</p><p>顾名思义，此类问题给出一个起点，求出它到所有点的最短路径。</p><h3><span id="dijkstra-算法">Dijkstra 算法</span></h3><p>Dijkstra，基于贪心的思想，可用来解决单源最短路径问题。</p><h4><span id="大致思路">大致思路</span></h4><p>创建数组$dis$，用 $dis_i$ 存储起点到 $i$ 点的最短路径。</p><p>先将除起点外所有点的 $dis$ 值设为 $\texttt {INF}$。每次循环，取没有被标记的点中 $dis$ 值最小的点。将这个点标记，并更新其它点的 $dis$ 值。</p><p>举个例子：</p><blockquote><p><img src="https://i.postimg.cc/q7jNy1Sx/graph.png" style="zoom:80%;"></p></blockquote><hr>]]></content>
+        <content type="html"><![CDATA[<p>摘要：初级图论，Dijkstra，待更新</p><span id="more"></span><hr><h1><span id="目录">目录</span></h1><h4><span id="一-单源最短路径问题">一、</span></h4><ol><li><a href="#Dijkstra 算法">Dijkstra 算法</a><ul><li><a href="#大致思路">大致思路</a></li></ul></li></ol><hr><h2><span id="单源最短路径问题">单源最短路径问题</span></h2><p>单元最短路径问题（简称 SSSP）。</p><p>顾名思义，此类问题给出一个起点，求出它到所有点的最短路径。</p><h3><span id="dijkstra-算法">Dijkstra 算法</span></h3><p>Dijkstra，基于贪心的思想，可用来解决单源最短路径问题。</p><h4><span id="大致思路">大致思路</span></h4><p>创建数组$dis$，用 $dis_i$ 存储起点到 $i$ 点的最短路径。</p><p>先将除起点外所有点的 $dis$ 值设为 $\texttt {INF}$。每次循环，取没有被标记的点中 $dis$ 值最小的点。将这个点标记，并更新其它点的 $dis$ 值。</p><p>举个例子：</p><blockquote><p><img src="https://i.postimg.cc/q7jNy1Sx/graph.png" style="zoom:1%;"></p></blockquote><hr>]]></content>
       
       
       <categories>
