@@ -185,8 +185,8 @@ body {
   box-sizing: border-box;
   color: var(--text-color);
   font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  font-size: 1em;
-  line-height: 2;
+  font-size: 0.87em;
+  line-height: 1.3;
   min-height: 100%;
   position: relative;
   transition: padding 0.2s ease-in-out;
@@ -1249,6 +1249,11 @@ header.header {
   border: 1px solid #eee;
   max-width: 120px;
   padding: 2px;
+  border-radius: 50%;
+  transition: transform 1s ease-out;
+}
+.site-author-image:hover {
+  transform: rotateZ(360deg);
 }
 .site-author-name {
   color: var(--text-color);
@@ -2365,14 +2370,6 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #111;
   color: #111;
 }
-.gt-header a,
-.gt-comments a,
-.gt-popup a {
-  border-bottom: 0;
-}
-.gt-container .gt-popup .gt-action.is--active::before {
-  top: 0.7em;
-}
 mjx-container[jax='CHTML'][display='true'],
 .has-jax {
   overflow: auto hidden;
@@ -2695,4 +2692,58 @@ mjx-container[display='true'] + br {
   .comments {
     padding: 10px 12px;
   }
+}
+body {
+  background: url("https://z4a.net/images/2022/11/28/g4otk40h.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 20%;
+}
+.post-block {
+  opacity: 0.85;
+}
+.site-brand-container {
+  background: #50616d;
+}
+.site-meta .site-title {
+  font-weight: bold;
+}
+.headband {
+  background: #eea2a4;
+}
+.header-inner {
+  background: rgba(255,255,255,0.8);
+}
+.sidebar {
+  opacity: 0.8;
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #d1633a;
+  text-decoration: underline;
+}
+.nav-number {
+  font-size: 0px;
+}
+.post-body h1 {
+  font-size: 2em;
+}
+.post-body h2 {
+  font-size: 1.5em;
+}
+.post-body h3 {
+  font-size: 1.17em;
+}
+.post-body h4 {
+  font-size: 16px;
+}
+.post-body h5 {
+  font-size: 0.83em;
+}
+.post-body h6 {
+  font-size: 0.67em;
 }
