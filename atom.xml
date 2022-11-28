@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-27T16:24:33.758Z</updated>
+  <updated>2022-11-28T00:48:40.620Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2022/11/27/chu-ji-tu-lun/"/>
     <id>http://example.com/2022/11/27/chu-ji-tu-lun/</id>
     <published>2022-11-27T15:08:38.827Z</published>
-    <updated>2022-11-27T16:24:33.758Z</updated>
+    <updated>2022-11-28T00:48:40.620Z</updated>
     
-    <content type="html"><![CDATA[<p>摘要：初级图论，Dijkstra，待更新</p><span id="more"></span><h1><span id="单源最短路径问题">单源最短路径问题</span></h1><p>单元最短路径问题（简称 SSSP）。</p><p>顾名思义，此类问题给出一个起点，求出它到所有点的最短路径。</p><h2><span id="一-dijkstra-算法">一、Dijkstra 算法</span></h2><p>Dijkstra，基于贪心的思想，可用来解决单源最短路径问题。但前提是所有边权都非负。</p><h3><span id="11-大致思路">1.1 大致思路</span></h3><ol><li>创建 $dis$ 数组，其中 $dis_i$ 表示从起点 $s$ 到点 $i$ 的最短距离。</li><li>维护两个顶点集合 $S$ 与 $Q$。其中 $S$ 中点的 $dis$ 值已经为最终值，无法继续修改。</li><li>将原点 $s$ 的 $dis$ 值设为 $0$，其他点的 $dis$ 值设为 $\texttt{INF}$。</li><li>取出 $Q$ 集合中 $dis$ 值最小的点，将它放入 $S$ 中，并遍历这个点所有的出边，更新出边所通向点的 $dis$ 值。</li><li>重复执行步骤4，直到 $Q$ 集合为空。</li></ol><p>下面这张动图完美地解释了 Dijkstra 算法的执行过程：</p><p><img src="https://z4a.net/images/2022/11/27/srchttp___img-blog.csdnimg.cn_img_convert_992286747e7fffe04c92e2cc10023c9d.gifreferhttp___img-blog.csdnimg.gif" alt></p><p>（图片来源于网络）</p><h3><span id="12-关于-dijkstra-算法的正确性">1.2 关于 Dijkstra 算法的正确性</span></h3><p>显然，每次从集合 $Q$ 中取出的点的 $dis$ 值只要不会再次被更新即可。 </p><p>假设集合 $Q$ 中 $dis$ 值最小的点为 $p$。现在将它从 $Q$ 中取出。</p><p>集合 $S$ 中的每一个点都曾用来更新过 $p$ 点的 $dis$ 值，因此 $p$ 点的 $dis$ 值不会再变小。</p><p>假设集合 $Q$ 中的点 $q$ 与点 $p$ 相连，因为 $dis_p\le dis_q$，那么当边权非负时， $dis_q$ 加上边权也一定大于等于 $dis_p$。</p><p>因此 $p$ 的 $dis$ 值不会再被更新。</p><p>而在上面的证明过程中，用到了边权非负的条件。显然，边权为负数时，证明不成立。</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>摘要：初级图论，Dijkstra，待更新</p><span id="more"></span><h1><span id="单源最短路径问题">单源最短路径问题</span></h1><p>单元最短路径问题（简称 SSSP）。</p><p>顾名思义，此类问题给出一个起点，求出它到所有点的最短路径。</p><h2><span id="一-dijkstra-算法">一、Dijkstra 算法</span></h2><p>Dijkstra，基于贪心的思想，可用来解决单源最短路径问题。但前提是所有边权都非负。</p><h3><span id="11-大致思路">1.1 大致思路</span></h3><ol><li>创建 $dis$ 数组，其中 $dis_i$ 表示从起点 $s$ 到点 $i$ 的最短距离。</li><li>维护两个顶点集合 $S$ 与 $Q$。其中 $S$ 中点的 $dis$ 值已经为最终值，无法继续修改。</li><li>将原点 $s$ 的 $dis$ 值设为 $0$，其他点的 $dis$ 值设为 $\texttt{INF}$。</li><li>取出 $Q$ 集合中 $dis$ 值最小的点，将它放入 $S$ 中，并遍历这个点所有的出边，更新出边所通向点的 $dis$ 值。</li><li>重复执行步骤4，直到 $Q$ 集合为空。</li></ol><p>下面这张动图完美地解释了 Dijkstra 算法的执行过程：</p><p><img src="https://z4a.net/images/2022/11/27/srchttp___img-blog.csdnimg.cn_img_convert_992286747e7fffe04c92e2cc10023c9d.gifreferhttp___img-blog.csdnimg.gif" alt></p><p>（图片来源于网络）</p><h3><span id="12-关于-dijkstra-算法的正确性">1.2 关于 Dijkstra 算法的正确性</span></h3><p>显然，每次从集合 $Q$ 中取出的点的 $dis$ 值只要不会再次被更新即可。 </p><p>假设集合 $Q$ 中 $dis$ 值最小的点为 $p$。现在将它从 $Q$ 中取出。</p><p>集合 $S$ 中的每一个点都曾用来更新过 $p$ 点的 $dis$ 值，因此 $p$ 点的 $dis$ 值不会再变小。</p><p>假设集合 $Q$ 中的点 $q$ 与点 $p$ 相连，因为 $dis_p\le dis_q$，那么当边权非负时， $dis_q$ 加上边权也一定大于等于 $dis_p$。</p><p>因此 $p$ 的 $dis$ 值不会再被更新。</p><p>而在上面的证明过程中，用到了边权非负的条件。显然，边权为负数时，证明不成立。</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;摘要：初级图论，Dijkstra，待更新&lt;/p&gt;</summary>
