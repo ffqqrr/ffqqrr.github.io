@@ -233,24 +233,25 @@ NexT.utils = {
   },
 
   registerSidebarTOC: function() {
-    this.sections = [...document.querySelectorAll('.post-toc li a.nav-link')].map(element => {
-      const target = document.getElementById(decodeURI(element.getAttribute('href')).replace('#', ''));
-      // TOC item animation navigate.
-      element.addEventListener('click', event => {
-        event.preventDefault();
-        const offset = target.getBoundingClientRect().top + window.scrollY;
-        window.anime({
-          targets  : document.scrollingElement,
-          duration : 500,
-          easing   : 'linear',
-          scrollTop: offset,
-          complete : () => {
-            history.pushState(null, document.title, element.href);
-          }
-        });
+  const navItems = document.querySelectorAll('.post-toc li');
+  const sections = [...navItems].map(element => {
+    var link = element.querySelector('a.nav-link');
+ var target = document.getElementById(decodeURI(link.getAttribute('href')).replace('#', ''));
+    // TOC item animation navigate.
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      //var target = document.getElementById(event.currentTarget.getAttribute('href').replace('#', ''));
+      var offset = target.getBoundingClientRect().top + window.scrollY;
+      window.anime({
+        targets  : document.scrollingElement,
+        duration : 500,
+        easing   : 'linear',
+        scrollTop: offset + 10
       });
-      return target;
     });
+    //return document.getElementById(link.getAttribute('href').replace('#', ''));
+ return target;
+  });
   },
 
   registerPostReward: function() {
