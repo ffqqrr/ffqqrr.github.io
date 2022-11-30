@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-29T15:12:47.900Z</updated>
+  <updated>2022-11-29T23:27:00.847Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>题解</title>
+    <link href="http://example.com/2022/11/30/solution/"/>
+    <id>http://example.com/2022/11/30/solution/</id>
+    <published>2022-11-29T23:26:50.152Z</published>
+    <updated>2022-11-29T23:27:00.847Z</updated>
+    
+    <content type="html"><![CDATA[<center>目前共计 2 篇题解</center><hr><p><a href="P1869">P1869</a> $\colorbox</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;center&gt;目前共计 2 篇题解&lt;/center&gt;
+
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&quot;P1869&quot;&gt;P1869&lt;/a&gt; $\colorbox&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>初级图论</title>
