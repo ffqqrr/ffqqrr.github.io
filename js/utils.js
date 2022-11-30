@@ -233,25 +233,24 @@ NexT.utils = {
   },
 
   registerSidebarTOC: function() {
-  const navItems = document.querySelectorAll('.post-toc li');
-  const sections = [...navItems].map(element => {
-    var link = element.querySelector('a.nav-link');
- var target = document.getElementById(decodeURI(link.getAttribute('href')).replace('#', ''));
-    // TOC item animation navigate.
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      //var target = document.getElementById(event.currentTarget.getAttribute('href').replace('#', ''));
-      var offset = target.getBoundingClientRect().top + window.scrollY;
-      window.anime({
-        targets  : document.scrollingElement,
-        duration : 500,
-        easing   : 'linear',
-        scrollTop: offset + 10
+    this.sections = [...document.querySelectorAll('.post-toc li a.nav-link')].map(element => {
+      const target = document.getElementById(decodeURI(element.getAttribute('href')).replace('#', ''));
+      // TOC item animation navigate.
+      element.addEventListener('click', event => {
+        event.preventDefault();
+        const offset = target.getBoundingClientRect().top + window.scrollY;
+        window.anime({
+          targets  : document.scrollingElement,
+          duration : 500,
+          easing   : 'linear',
+          scrollTop: offset,
+          complete : () => {
+            history.pushState(null, document.title, element.href);
+          }
+        });
       });
+      return target;
     });
-    //return document.getElementById(link.getAttribute('href').replace('#', ''));
- return target;
-  });
   },
 
   registerPostReward: function() {
@@ -276,8 +275,8 @@ NexT.utils = {
       parent = parent.parentNode;
     }
     // Scrolling to center active TOC element if TOC content is taller then viewport.
-    const tocElement = document.querySelector('.sidebar-panel-container');
-    if (!tocElement.parentNode.classList.contains('sidebar-toc-active')) return;
+    const tocElement = document.querySelector(CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini' ? '.sidebar-panel-container' : '.sidebar');
+    if (!document.querySelector('.sidebar-toc-active')) return;
     window.anime({
       targets  : tocElement,
       duration : 200,
@@ -287,7 +286,7 @@ NexT.utils = {
   },
 
   updateSidebarPosition: function() {
-    if (window.innerWidth < 992 || CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') return;
+    if (window.innerWidth < 1200 || CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') return;
     // Expand sidebar on post detail page by default, when post has a toc.
     const hasTOC = document.querySelector('.post-toc');
     let display = CONFIG.page.sidebar;

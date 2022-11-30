@@ -2739,13 +2739,18 @@ body {
 }
 .post-block {
   opacity: 0.9;
-  border-radius: 100px;
+}
+.code {
+  opacity: 1;
 }
 .site-brand-container {
   background: #50616d;
 }
 .site-meta .site-title {
   font-weight: bold;
+}
+.headband {
+  background: #eea2a4;
 }
 .header-inner {
   background: #fff;
@@ -2760,9 +2765,6 @@ body {
 .post-body p a:hover {
   color: #d1633a;
   text-decoration: underline;
-}
-.nav-number {
-  font-size: 0px;
 }
 .post-body h1 {
   font-size: 2em;
@@ -2788,4 +2790,7 @@ body {
 }
 .footer {
   font-size: 0px;
+}
+ol {
+  visibility: visible;
 }
