@@ -257,10 +257,11 @@
 <p>空间复杂度 $O(N)$。</p>
 <h3 id="3-链式前向星"><a href="#3-链式前向星" class="headerlink" title="3. 链式前向星"></a>3. 链式前向星</h3><p>只用几个静态数组便可以存图。</p>
 <p>$head_i$ 存储 $i$ 点的所有出边中，存储位置做靠右的那一条。</p>
-<p>$nxt_i$ 表示与 $i$ 边相同入点的，存储在它左侧的，最靠近它的边（如果不存在，则 $nxt_i=1$）。</p>
+<p>$nxt_i$ 表示与 $i$ 边相同入点的，存储在它左侧的，最靠近它的边（如果不存在，则 $nxt_i&#x3D;1$）。</p>
 <p>$to_i$ 表示 $i$ 边的出点。</p>
 <p>$qz_i$ 表示 $i$ 边的权值。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> head[N],to[M],qz[M],nxt[M];</span><br><span class="line"><span class="type">int</span> cnt;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> z)</span><span class="comment">//添加一条边：从x通向y，权值为z</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cnt++;</span><br><span class="line">	to[cnt]=y;<span class="comment">//将cnt边的出点设为y</span></span><br><span class="line">    qz[cnt]=z;<span class="comment">//将cnt边的权值设为z</span></span><br><span class="line">    nxt[cnt]=head[x];<span class="comment">//把nxt[cnt]指向上一条x的出边</span></span><br><span class="line">    head[x]=cnt;<span class="comment">//将cnt暂时设为x的出边中，存储位置最靠右的边</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//遍历i点的所有出边（相当于从右向左将i点的出边扫了一遍）</span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> j=head[i];j;j=nxt[i]) <span class="comment">//出边通向的点：to[j]，出边的权值：qz[j]</span></span><br></pre></td></tr></table></figure>
+
 <hr>
 <h2 id="二、单源最短路径问题"><a href="#二、单源最短路径问题" class="headerlink" title="二、单源最短路径问题"></a><center>二、单源最短路径问题</center></h2><p>单元最短路径问题（简称 SSSP）。</p>
 <p>顾名思义，此类问题给出一个起点，求出它到所有点的最短路径。</p>
@@ -273,7 +274,7 @@
 <li>重复执行步骤4，直到 $Q$ 集合为空。</li>
 </ol>
 <p>下面这张动图完美地解释了 Dijkstra 算法的执行过程：</p>
-<p><img src="https://z4a.net/images/2022/11/27/srchttp___img-blog.csdnimg.cn_img_convert_992286747e7fffe04c92e2cc10023c9d.gifreferhttp___img-blog.csdnimg.gif" alt=""></p>
+<p><img src="https://z4a.net/images/2022/11/27/srchttp___img-blog.csdnimg.cn_img_convert_992286747e7fffe04c92e2cc10023c9d.gifreferhttp___img-blog.csdnimg.gif"></p>
 <p>（图片来源于网络）</p>
 <h4 id="关于-Dijkstra-算法的正确性"><a href="#关于-Dijkstra-算法的正确性" class="headerlink" title="关于 Dijkstra 算法的正确性"></a>关于 Dijkstra 算法的正确性</h4><p>显然，每次从集合 $Q$ 中取出的点的 $dis$ 值只要不会再次被更新即可。 </p>
 <p>假设集合 $Q$ 中 $dis$ 值最小的点为 $p$。现在将它从 $Q$ 中取出。</p>
