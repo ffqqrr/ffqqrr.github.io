@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-11-30T16:56:01.435Z</updated>
+  <updated>2022-12-01T07:18:06.478Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2022/11/30/solution/"/>
     <id>http://example.com/2022/11/30/solution/</id>
     <published>2022-11-29T23:26:50.152Z</published>
-    <updated>2022-11-30T16:56:01.435Z</updated>
+    <updated>2022-12-01T07:18:06.478Z</updated>
     
-    <content type="html"><![CDATA[<center>目前共计 2 篇题解</center><hr><p><a href="http://localhost:4000/solution/P1869">P1869 互不侵犯</a>  　<font color="white"><font style="background: #279fff ">　提高+&#x2F;省选-　</font> 　　<a href="https://www.luogu.com.cn/problem/P1896">题目链接</a></p><p><a href="http://localhost:4000/solution/P7633">P7633 BRODOVI</a> 　<font color="white"><font style="background: #ffc116 ">　普及&#x2F;提高-　 </font> 　　<a href="https://www.luogu.com.cn/problem/P7633">题目链接</a></p>]]></content>
+    <content type="html"><![CDATA[<center>目前共计 2 篇题解</center><hr><p><a href="/solution/P1869">P1869 互不侵犯</a>  　<font color="white"><font style="background: #279fff ">　提高+&#x2F;省选-　</font> 　　<a href="https://www.luogu.com.cn/problem/P1896">题目链接</a></p><p><a href="/solution/P7633">P7633 BRODOVI</a> 　<font color="white"><font style="background: #ffc116 ">　普及&#x2F;提高-　 </font> 　　<a href="https://www.luogu.com.cn/problem/P7633">题目链接</a></p>]]></content>
     
     
     <summary type="html">各种各样的题解将出现在此处</summary>
