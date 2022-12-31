@@ -2844,3 +2844,9 @@ blockquote {
 .site-description {
   font-size: 0px;
 }
+.post-toc .nav .nav-child {
+  display: block;
+}
+.wl-power {
+  font-size: 0px;
+}
