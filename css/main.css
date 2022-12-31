@@ -2849,4 +2849,5 @@ blockquote {
 }
 .wl-power {
   font-size: 0px;
+  display: none;
 }
