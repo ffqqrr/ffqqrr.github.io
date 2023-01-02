@@ -2747,16 +2747,16 @@ body {
 .menu .menu-item span.exturl:hover {
   background: rgba(249,249,249,0.62);
 }
-.highlight {
-  border-radius: 1px;
-  background-color: #f6f8fa;
-  overflow: auto;
-  border-width: 1px 1px 1px 2px;
-  border-style: dashed dashed dashed solid;
-  border-color: #aaa #aaa #aaa #6ce26c;
-  border-image: initial;
-  position: relative;
-}
+/*.highlight {
+    border-radius: 1px;
+    background-color: rgb(246, 248, 250);
+    overflow: auto;
+    border-width: 1px 1px 1px 2px;
+    border-style: dashed dashed dashed solid;
+    border-color: rgb(170, 170, 170) rgb(170, 170, 170) rgb(170, 170, 170) rgb(108, 226, 108);
+    border-image: initial;
+    position: relative;
+}*/
 strong {
   font-weight: bold;
 /* background-color: #9f95ff; */
@@ -2848,4 +2848,55 @@ blockquote {
 .wl-power {
   font-size: 0px;
   display: none;
+}
+.sidebar-panel-container::-webkit-scrollbar {
+  width: 0 !important;
+}
+.table-container {
+  max-height: 79vh;
+}
+.table-container::-webkit-scrollbar {
+  width: 7px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #279fff;
+}
+.line .hljs-meta {
+  color: #98c379;
+}
+.line .hljs-meta .hljs-keyword {
+  color: #c678dd;
+  font-weight: normal;
+}
+.line .hljs-meta .hljs-string {
+  color: #690;
+}
+.line .hljs-keyword {
+  color: #c678dd;
+}
+.line .hljs-type {
+  color: #c678dd;
+}
+.ling .hljs-string {
+  color: #690;
+}
+.line .hljs-title {
+  color: #61aeee;
+}
+.line .hljs-number {
+  color: #98c379;
+}
+.code {
+  background-color: #282c34;
+}
+.use-motion::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+  color: #828282;
+}
+.use-motion::-webkit-scrollbar-thumb {
+  color: #828282;
+}
+.use-motion::-webkit-scrollbar-thumb:hover {
+  background-color: #279fff;
 }
