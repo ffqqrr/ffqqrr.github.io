@@ -1490,7 +1490,7 @@ header.header {
   white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: none;
+  display: block;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -2858,8 +2858,8 @@ blockquote {
 .table-container::-webkit-scrollbar {
   width: 7px;
 }
-.table-container::-webkit-scrollbar-track {
-  background-color: #eeeeef fffe;
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
 }
 .table-container::-webkit-scrollbar-thumb:hover {
   background-color: #279fff;
@@ -2888,6 +2888,9 @@ blockquote {
 }
 .line .hljs-number {
   color: #98c379;
+}
+.line .hljs-comment {
+  color: #6c7380;
 }
 .table-container {
   color: #fff;
