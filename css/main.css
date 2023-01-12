@@ -2908,3 +2908,6 @@ blockquote {
 ul.breadcrumb {
   font-size: 0px;
 }
+.wl-header label {
+  font-weight: bolder;
+}
