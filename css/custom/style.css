@@ -1,0 +1,75 @@
+body {
+  background: url("https://fuqirui.gitee.io/files/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+p {
+  line-height: 20px;
+}
+.post-block {
+  border-radius: 20px !important;
+  background-color: rgba(255,255,255,0.9) !important;
+}
+.sidebar-inner {
+  border-radius: 20px !important;
+  background-color: rgba(255,255,255,0.9) !important;
+}
+.header-inner {
+  border-radius: 20px !important;
+  background-color: rgba(255,255,255,0.9) !important;
+}
+.comments {
+  border-radius: 20px !important;
+  background-color: rgba(255,255,255,0.9) !important;
+}
+.site-brand-container {
+  background-color: #50616d;
+}
+.site-subtitle {
+  font-size: 0px;
+  height: 0px;
+}
+code {
+  background-color: #fffff0;
+  color: rgba(0,0,0,0.75);
+}
+.footer {
+  font-size: 0px;
+  height: 0px;
+}
+.tag-cloud-0 {
+  background-color: #1bbbff;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000;
+}
+.tag-cloud-0::before {
+  content: "<div class='fa fa-tags fa-fw'></div>";
+}
+.hljs-meta {
+  color: #98c379;
+}
+.hljs-keyword {
+  color: #c678dd !important;
+}
+.hljs-title {
+  color: #61aeee;
+}
+.hljs-number {
+  color: #98c379;
+}
+.hljs-string {
+  color: #98c379 !important;
+}
+.hljs-comment {
+  color: #6c7380;
+}
+.hljs-built_in {
+  color: #56b6c2;
+}
+.code {
+  background-color: #282c34;
+}
