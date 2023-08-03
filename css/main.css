@@ -2801,3 +2801,17 @@ code {
 .code {
   background-color: #282c34;
 }
+::selection {
+  background: #c3d9ff;
+  color: #000;
+}
+blockquote {
+  background-color: #fff !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+details {
+  cursor: pointer;
+}
