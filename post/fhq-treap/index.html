@@ -20,32 +20,36 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="FQR_的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FQR_的博客">
-<meta property="og:url" content="http://example.com/archives/2023/01/index.html">
+    <meta name="description" content="摘要：fhq-treap">
+<meta property="og:type" content="article">
+<meta property="og:title" content="fhq-treap">
+<meta property="og:url" content="http://example.com/post/fhq-treap/index.html">
 <meta property="og:site_name" content="FQR_的博客">
-<meta property="og:description" content="FQR_的博客">
+<meta property="og:description" content="摘要：fhq-treap">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-12-19T06:04:49.820Z">
+<meta property="article:modified_time" content="2024-12-23T10:15:57.303Z">
 <meta property="article:author" content="FQR_的博客">
+<meta property="article:tag" content="数据结构">
+<meta property="article:tag" content="平衡树">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/archives/2023/01/">
+<link rel="canonical" href="http://example.com/post/fhq-treap/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2023/01/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/post/fhq-treap/","path":"/post/fhq-treap/","title":"fhq-treap"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | FQR_的博客</title>
+<title>fhq-treap | FQR_的博客</title>
   
 
 
 
 
 
-<link rel="dns-prefetch" href="waline.fqr-qwq.space">
+<link rel="dns-prefetch" href="waline.fqr-qwq.cn">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -70,7 +74,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">FQR_的博客</h1>
+      <p class="site-title">FQR_的博客</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">FQR_的博客</p>
@@ -122,7 +126,7 @@
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="FQR_的博客"
-      src="https://fuqirui.gitee.io/files/avatar.jpg">
+      src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">FQR_的博客</p>
   <div class="site-description" itemprop="description">FQR_的博客</div>
 </div>
@@ -141,7 +145,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -149,6 +153,9 @@
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
         <a href="https://www.luogu.com.cn/user/559919" title="洛谷 → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;559919" rel="noopener" target="_blank">洛谷</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://codeforces.com/profile/FQR_" title="Codeforces → https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;FQR_" rel="noopener" target="_blank">Codeforces</a>
       </span>
   </div>
 
@@ -174,50 +181,124 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 8 篇日志。 继续努力。</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/post/fhq-treap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="FQR_的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FQR_的博客">
+      <meta itemprop="description" content="FQR_的博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="fhq-treap | FQR_的博客">
+      <meta itemprop="description" content="摘要：fhq-treap">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          fhq-treap
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-19 14:04:49" itemprop="dateCreated datePublished" datetime="2024-12-19T14:04:49+08:00">2024-12-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-12-23 18:15:57" itemprop="dateModified" datetime="2024-12-23T18:15:57+08:00">2024-12-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/post/fhq-treap/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/post/fhq-treap/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+            <div class="post-description">摘要：fhq-treap</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2023-01-26T14:56:51+08:00"
-              content="2023-01-26">
-          01-26
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/post/shu-ju-jie-gou-ha-ti/" itemprop="url">
-            <span itemprop="name">推荐几道数据结构好题</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+              <a href="/tags/%E5%B9%B3%E8%A1%A1%E6%A0%91/" rel="tag"># 平衡树</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/make_data/" rel="prev" title="数据生成器 v1.0.0">
+                  <i class="fa fa-chevron-left"></i> 数据生成器 v1.0.0
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -227,7 +308,7 @@
 
 <div class="copyright">
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -256,10 +337,10 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">false</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline.fqr-qwq.space","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"欢迎评论~"},"avatar":"mm","meta":["nick","mail"],"requiredMeta":["nick"],"pageSize":10,"visitor":true,"comment_count":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","login":"enable","el":"#waline","comment":true,"path":"/archives/2023/01/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline.fqr-qwq.cn","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"欢迎评论~"},"avatar":"mm","meta":["nick","mail"],"requiredMeta":["nick"],"pageSize":10,"visitor":true,"comment_count":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","login":"enable","el":"#waline","comment":true,"path":"/post/fhq-treap/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
