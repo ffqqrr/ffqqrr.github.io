@@ -18,11 +18,48 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #262729;
-  --highlight-foreground: #b7bec9;
-  --highlight-gutter-background: #343638;
-  --highlight-gutter-foreground: #a8aeb9;
+  --highlight-background: #fafafa;
+  --highlight-foreground: #5e646f;
+  --highlight-gutter-background: #eaebec;
+  --highlight-gutter-foreground: #6d737c;
   color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg-color: #282828;
+    --content-bg-color: #333;
+    --card-bg-color: #555;
+    --text-color: #ccc;
+    --blockquote-color: #bbb;
+    --link-color: #ccc;
+    --link-hover-color: #eee;
+    --brand-color: #ddd;
+    --brand-hover-color: #ddd;
+    --table-row-odd-bg-color: #282828;
+    --table-row-hover-bg-color: #363636;
+    --menu-item-bg-color: #555;
+    --theme-color: #222;
+    --btn-default-bg: #222;
+    --btn-default-color: #ccc;
+    --btn-default-border-color: #555;
+    --btn-default-hover-bg: #666;
+    --btn-default-hover-color: #ccc;
+    --btn-default-hover-border-color: #666;
+    --highlight-background: #262729;
+    --highlight-foreground: #b7bec9;
+    --highlight-gutter-background: #343638;
+    --highlight-gutter-foreground: #a8aeb9;
+    color-scheme: dark;
+  }
+  img {
+    opacity: 0.75;
+  }
+  img:hover {
+    opacity: 0.9;
+  }
+  iframe {
+    color-scheme: light;
+  }
 }
 html {
   line-height: 1.15; /* 1 */
@@ -363,12 +400,21 @@ td {
   transform: rotate(-45deg);
 }
 /*!
+  Theme: Edge Light
+  Author: cjayross (https://github.com/cjayross)
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
+  Maintainer: @highlightjs/core-team
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#5e646f;background:#fafafa}.hljs ::selection,.hljs::selection{background-color:#d69822;color:#5e646f}.hljs-comment{color:#5e646f}.hljs-tag{color:#6587bf}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#5e646f}.hljs-operator{opacity:.7}.hljs-attr,.hljs-bullet,.hljs-deletion,.hljs-link,.hljs-literal,.hljs-name,.hljs-number,.hljs-selector-tag,.hljs-symbol,.hljs-template-variable,.hljs-variable,.hljs-variable.constant_{color:#db7070}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#d69822}.hljs-strong{font-weight:700;color:#d69822}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#7c9f4b}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#509c93}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#6587bf}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#b870ce}.hljs-emphasis{color:#b870ce;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#509c93}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+@media (prefers-color-scheme: dark) {
+/*!
   Theme: Edge Dark
   Author: cjayross (https://github.com/cjayross)
   License: ~ MIT (or more permissive) [via base16-schemes-source]
   Maintainer: @highlightjs/core-team
   Version: 2021.09.0
 */pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#b7bec9;background:#262729}.hljs ::selection,.hljs::selection{background-color:#b7bec9;color:#b7bec9}.hljs-comment{color:#3e4249}.hljs-tag{color:#73b3e7}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#b7bec9}.hljs-operator{opacity:.7}.hljs-attr,.hljs-bullet,.hljs-deletion,.hljs-link,.hljs-literal,.hljs-name,.hljs-number,.hljs-selector-tag,.hljs-symbol,.hljs-template-variable,.hljs-variable,.hljs-variable.constant_{color:#e77171}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#dbb774}.hljs-strong{font-weight:700;color:#dbb774}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#a1bf78}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#5ebaa5}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#73b3e7}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#d390e7}.hljs-emphasis{color:#d390e7;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#5ebaa5}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
+}
 .highlight:hover .copy-btn,
 pre:hover .copy-btn {
   opacity: 1;
@@ -1489,7 +1535,7 @@ header.header {
   white-space: nowrap;
 }
 .post-toc .nav .nav-child {
-  display: none;
+  display: block;
 }
 .post-toc .nav .active > .nav-child {
   display: block;
@@ -2410,6 +2456,52 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #111;
   color: #111;
 }
+@media (prefers-color-scheme: dark) {
+  .tag-cloud-0 {
+    border-bottom-color: #555;
+    color: #555;
+  }
+  .tag-cloud-1 {
+    border-bottom-color: #646464;
+    color: #646464;
+  }
+  .tag-cloud-2 {
+    border-bottom-color: #737373;
+    color: #737373;
+  }
+  .tag-cloud-3 {
+    border-bottom-color: #828282;
+    color: #828282;
+  }
+  .tag-cloud-4 {
+    border-bottom-color: #929292;
+    color: #929292;
+  }
+  .tag-cloud-5 {
+    border-bottom-color: #a1a1a1;
+    color: #a1a1a1;
+  }
+  .tag-cloud-6 {
+    border-bottom-color: #b0b0b0;
+    color: #b0b0b0;
+  }
+  .tag-cloud-7 {
+    border-bottom-color: #c0c0c0;
+    color: #c0c0c0;
+  }
+  .tag-cloud-8 {
+    border-bottom-color: #cfcfcf;
+    color: #cfcfcf;
+  }
+  .tag-cloud-9 {
+    border-bottom-color: #dedede;
+    color: #dedede;
+  }
+  .tag-cloud-10 {
+    border-bottom-color: #eee;
+    color: #eee;
+  }
+}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -2740,20 +2832,42 @@ p {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+.darkmode--activated .post-block {
+  border-radius: 20px !important;
+  background-color: #333 !important;
+}
 .sidebar-inner {
   border-radius: 20px !important;
   background-color: #fff !important;
+}
+.darkmode--activated .sidebar-inner {
+  border-radius: 20px !important;
+  background-color: #333 !important;
 }
 .header-inner {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+.darkmode--activated .header-inner {
+  border-radius: 20px !important;
+  background-color: #333 !important;
+}
 .comments {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+.darkmode--activated .comments {
+  border-radius: 20px !important;
+  background-color: #333 !important;
+}
 .site-brand-container {
   background-color: #50616d;
+}
+.darkmode--activated .site-brand-container {
+  background-color: #000;
+}
+.darkmode--activated img {
+  opacity: 1 !important;
 }
 .site-subtitle {
   font-size: 0px;

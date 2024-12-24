@@ -12,20 +12,42 @@ p {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+.darkmode--activated .post-block {
+  border-radius: 20px !important;
+  background-color: #333 !important;
+}
 .sidebar-inner {
   border-radius: 20px !important;
   background-color: #fff !important;
+}
+.darkmode--activated .sidebar-inner {
+  border-radius: 20px !important;
+  background-color: #333 !important;
 }
 .header-inner {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+.darkmode--activated .header-inner {
+  border-radius: 20px !important;
+  background-color: #333 !important;
+}
 .comments {
   border-radius: 20px !important;
   background-color: #fff !important;
 }
+.darkmode--activated .comments {
+  border-radius: 20px !important;
+  background-color: #333 !important;
+}
 .site-brand-container {
   background-color: #50616d;
+}
+.darkmode--activated .site-brand-container {
+  background-color: #000;
+}
+.darkmode--activated img {
+  opacity: 1 !important;
 }
 .site-subtitle {
   font-size: 0px;
