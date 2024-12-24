@@ -2866,6 +2866,14 @@ p {
 .darkmode--activated .site-brand-container {
   background-color: #000;
 }
+.back-to-top {
+  color: #444 !important;
+  background-color: #fff !important;
+}
+.darkmode--activated .back-to-top {
+  color: #fff !important;
+  background-color: #444 !important;
+}
 .darkmode--activated img {
   opacity: 1 !important;
 }
