@@ -2933,6 +2933,9 @@ p {
   background-color: #444 !important;
   color: #eee !important;
 }
+.darkmode--activated .wl-empty {
+  color: #ccc !important;
+}
 .site-subtitle {
   font-size: 0px;
   height: 0px;
