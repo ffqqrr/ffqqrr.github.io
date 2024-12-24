@@ -49,6 +49,62 @@ p {
 .darkmode--activated img {
   opacity: 1 !important;
 }
+.darkmode--activated .wl-panel {
+  background-color: #333 !important;
+}
+.darkmode--activated .wl-editor {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-editor:focus {
+  background-color: #444 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-input {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-input:focus {
+  background-color: #444 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-content p {
+  color: #ccc !important;
+}
+.darkmode--activated .wl-reply {
+  color: #fff !important;
+}
+.darkmode--activated .wl-like {
+  color: #fff !important;
+}
+.darkmode--activated .wl-edit {
+  color: #fff !important;
+}
+.darkmode--activated .wl-header-item label {
+  color: #ccc !important;
+}
+.darkmode--activated .wl-btn {
+  color: #ccc !important;
+}
+.darkmode--activated .wl-btn:disabled {
+  color: #333 !important;
+}
+.darkmode--activated .wl-os {
+  background-color: #333 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-os {
+  background-color: #444 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-browser {
+  background-color: #444 !important;
+  color: #eee !important;
+}
+.darkmode--activated .wl-addr {
+  background-color: #444 !important;
+  color: #eee !important;
+}
 .site-subtitle {
   font-size: 0px;
   height: 0px;
