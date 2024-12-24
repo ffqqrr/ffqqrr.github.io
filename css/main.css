@@ -2738,19 +2738,19 @@ p {
 }
 .post-block {
   border-radius: 20px !important;
-  background-color: rgba(255,255,255,0.9) !important;
+  background-color: #fff !important;
 }
 .sidebar-inner {
   border-radius: 20px !important;
-  background-color: rgba(255,255,255,0.9) !important;
+  background-color: #fff !important;
 }
 .header-inner {
   border-radius: 20px !important;
-  background-color: rgba(255,255,255,0.9) !important;
+  background-color: #fff !important;
 }
 .comments {
   border-radius: 20px !important;
-  background-color: rgba(255,255,255,0.9) !important;
+  background-color: #fff !important;
 }
 .site-brand-container {
   background-color: #50616d;
