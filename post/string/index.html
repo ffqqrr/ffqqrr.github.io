@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.13.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="摘要：串串可爱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串">
+<meta property="og:url" content="http://example.com/post/string/index.html">
+<meta property="og:site_name" content="FQR_的博客">
+<meta property="og:description" content="摘要：串串可爱">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-13T02:29:40.144Z">
+<meta property="article:modified_time" content="2025-02-04T14:31:29.847Z">
+<meta property="article:author" content="FQR_的博客">
+<meta property="article:tag" content="字符串">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/post/string/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/post/string/","path":"/post/string/","title":"字符串"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>字符串 | FQR_的博客</title>
+  
+
+
+
+
+
+<link rel="dns-prefetch" href="waline.fqr-qwq.cn">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+  <script src="/js/smooth-scroll.js"></script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><link rel="alternate" href="/atom.xml" title="FQR_的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">FQR_的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">FQR_的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%EF%BC%88SAM%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">后缀自动机（SAM）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAM-%E4%B8%8E%E5%AD%90%E4%B8%B2%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.3.</span> <span class="nav-text">SAM 与子串的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E5%85%A5%E5%85%B6%E5%AE%83%E6%A6%82%E5%BF%B5"><span class="nav-number">1.4.</span> <span class="nav-text">引入其它概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#endpos"><span class="nav-number">1.4.1.</span> <span class="nav-text">endpos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%90%8E%E7%BC%80%E9%93%BE%E6%8E%A5-link"><span class="nav-number">1.4.2.</span> <span class="nav-text">后缀链接 link</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E5%AE%9A%E4%B9%89"><span class="nav-number">1.4.3.</span> <span class="nav-text">其它定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SAM-%E7%9A%84%E6%9E%84%E5%BB%BA"><span class="nav-number">1.5.</span> <span class="nav-text">SAM 的构建</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="FQR_的博客"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">FQR_的博客</p>
+  <div class="site-description" itemprop="description">FQR_的博客</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/559919" title="洛谷 → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;559919" rel="noopener" target="_blank">洛谷</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://codeforces.com/profile/FQR_" title="Codeforces → https:&#x2F;&#x2F;codeforces.com&#x2F;profile&#x2F;FQR_" rel="noopener" target="_blank">Codeforces</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/post/string/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="FQR_的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FQR_的博客">
+      <meta itemprop="description" content="FQR_的博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="字符串 | FQR_的博客">
+      <meta itemprop="description" content="摘要：串串可爱">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          字符串
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-01-13 10:29:40" itemprop="dateCreated datePublished" datetime="2025-01-13T10:29:40+08:00">2025-01-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-04 22:31:29" itemprop="dateModified" datetime="2025-02-04T22:31:29+08:00">2025-02-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">算法</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/post/string/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/post/string/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+</div>
+
+            <div class="post-description">摘要：串串可爱</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="后缀自动机（SAM）"><a href="#后缀自动机（SAM）" class="headerlink" title="后缀自动机（SAM）"></a>后缀自动机（SAM）</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>SAM 是一种很优秀的字符串数据结构。它可以将一个字符串的所有子串压缩成一个 $O(n)$ 大小的结构。</p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>SAM 是有限状态自动机，换种说法就是：</p>
+<ul>
+<li>SAM 是一个<strong>有向无环图</strong>。节点被称为<strong>状态</strong>。边有边权，权值为一个字母，边称为<strong>转移</strong>。</li>
+<li>存在一个源点 $t_0$，即初始状态。从 $t_0$ 出发可以到达所有状态。</li>
+<li>存在若干个终止状态。从 $t_0$ 到某个终止状态的路径，边权拼起来一定是 $s$ 的一个后缀。反之，$s$ 的任意一个后缀对应一条从 $t_0$ 到某个终止状态的路径。</li>
+</ul>
+<h3 id="SAM-与子串的关系"><a href="#SAM-与子串的关系" class="headerlink" title="SAM 与子串的关系"></a>SAM 与子串的关系</h3><p>从 $t_0$ 出发的任意一条路径，边权拼起来一定是 $s$ 的子串。反之，$s$ 的任意子串对应从 $t_0$ 出发的一条路径。</p>
+<p>$t_0$ 到每个点可能有多条路径，也就是说每个状态对应一些子串的集合。</p>
+<h3 id="引入其它概念"><a href="#引入其它概念" class="headerlink" title="引入其它概念"></a>引入其它概念</h3><h4 id="endpos"><a href="#endpos" class="headerlink" title="endpos"></a>endpos</h4><p>假设 $s$ 有非空子串 $t$，则 $\operatorname{endpos}(t)$ 表示 $t$ 在 $s$ 中所有出现的结束位置。例如 $s=\texttt{abcbc}$，则 $\operatorname{endpos}(\texttt{bc})=\{3,5\}$。</p>
+<p>某几个子串的 $\operatorname{endpos}$ 可能相同，例如 $s=\texttt{abcbc}$，则 $\operatorname{endpos}(\texttt{c})=\operatorname{endpos}(\texttt{bc})=\{3,5\}$。$\operatorname{endpos}$ 相同的子串会被划分到同一个<strong>等价类</strong> 中， $s$ 的所有子串会被划分成若干个等价类。</p>
+<p>SAM 的每个状态对应一个等价类中的所有子串。也就是说，SAM 的状态数为等价类的数量 $+1$，其中 $+1$ 加上的是 $t_0$，$t_0$ 对应的是空串。</p>
+<blockquote>
+<p><strong>引理 1</strong>：$u,w$ 是字符串的两个子串，则：$u$ 是 $w$ 的后缀 $\iff$ $\operatorname{endpos}(w) \subseteq \operatorname{endpos}(u)$。</p>
+<p><strong>引理 2</strong>：在一个等价类中，短的字符串是长的字符串的后缀，且这些字符串长度连续。</p>
+</blockquote>
+<h4 id="后缀链接-link"><a href="#后缀链接-link" class="headerlink" title="后缀链接 link"></a>后缀链接 link</h4><p>现有状态 $u$，假设 $u$ 所对应的等价类中，长度最长的是 $t$。将 $t$ 的所有后缀按长度递减排序，则这个等价类中包含前几个后缀。设第一个<strong>不属于</strong>这个等价类的后缀为 $w$（一定存在，因为 $w$ 可以为空），则 $\operatorname{link}(u)$ 连向 $w$ 所属的等价类所对应的状态。</p>
+<p>所有的后缀链接构成一棵根节点为 $t_0$ 的<strong>树</strong>。</p>
+<p><strong>注意后缀链接 link 的边与 SAM 的边并不相同</strong>。</p>
+<p>由引理 1 可知，$\operatorname{endpos}(u)\subsetneq\operatorname{endpos}(\operatorname{link}(u))$。</p>
+<h4 id="其它定义"><a href="#其它定义" class="headerlink" title="其它定义"></a>其它定义</h4><p>对于状态 $u$，其等价类中最长的字符串为 $\operatorname{longest}(u)$，其长度为 $\operatorname{len}(u)$。最短的字符串为 $\operatorname{shortest}(u)$，其长度为 $\operatorname{minlen}(u)$。</p>
+<p>可以得出：$\operatorname{minlen}(u)=\operatorname{len}(\operatorname{link}(u))+1$。</p>
+<h3 id="SAM-的构建"><a href="#SAM-的构建" class="headerlink" title="SAM 的构建"></a>SAM 的构建</h3><p>我们采用在线构建方法，即向 SAM 中逐个加入字符。</p>
+<p>先放代码（代码中 $t_0$ 节点的编号为 $1$）：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">SAM</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> ch[<span class="number">26</span>], len, link;</span><br><span class="line">    <span class="comment">// ch[x]: 从这个节点出发的，边权为 x 的边</span></span><br><span class="line">    <span class="comment">// len: 这个点对应的等价类中最长字符串的长度</span></span><br><span class="line">    <span class="comment">// link: 这个点的后缀链接</span></span><br><span class="line">&#125; t[N];</span><br><span class="line"><span class="type">int</span> tot = <span class="number">1</span>, lst = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// tot 为 SAM 中点的总数</span></span><br><span class="line"><span class="comment">// lst 为 上一次操作过后整个串对应的节点</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> p = lst, cur = ++tot;</span><br><span class="line">    t[cur].len = t[p].len + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (p &amp;&amp; !t[p].ch[x]) t[p].ch[x] = cur, p = t[p].link;</span><br><span class="line">    <span class="keyword">if</span> (!p) t[cur].link = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> q = t[p].ch[x];</span><br><span class="line">        <span class="keyword">if</span> (t[p].len + <span class="number">1</span> == t[q].len) t[cur].link = q;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> nw = ++tot;</span><br><span class="line">            t[nw] = t[q];</span><br><span class="line">            t[nw].len = t[p].len + <span class="number">1</span>;</span><br><span class="line">            t[q].link = t[cur].link = nw;</span><br><span class="line">            <span class="keyword">while</span> (p &amp;&amp; t[p].ch[x] == q) t[p].ch[x] = nw, p = t[p].link;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    lst = tot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们假设已知字符串 $s$ 的 SAM，现在我们要添加字符 $x$，新的字符串为 $s+x$。</p>
+<p>接下来我们看看 $\operatorname{add}$ 函数里代码的作用：</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> p = lst, cur = ++tot;</span><br><span class="line">t[cur].len = t[p].len + <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>$lst$ 指原串 $s$ 所属的节点，我们记录这个点为 $p$。</p>
+<p>同时我们要新建一个节点，记这个节点为 $cur$。</p>
+<p>新建节点也就意味着新建了一个等价类，显然这个等价类中最长的字符串为 $s+x$。所以可以求出 $\operatorname{len}(cur)=\operatorname{len}(p)+1$，即 $s$ 的长度 $+1$。</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (p &amp;&amp; !t[p].ch[x]) t[p].ch[x] = cur, p = t[p].link;</span><br></pre></td></tr></table></figure>
+<p>在这个循环中，$p$ 会不停跳到 $\operatorname{link}(p)$，因此 $p$ 对应的字符串永远是原串 $s$ 的后缀。</p>
+<p>循环的执行条件 <code>!t[p].ch[x]</code>，意为 $p$ 没有权值为 $x$ 的转移，也就是说 $p$ 中的字符串接上 $x$ 后都没有在原串中出现过。那么此时 $p$ 中所有的字符串接上 $x$ 后仍为同一个等价类，直接把状态 $p$ 添加一个权值为 $x$ 的转移，指向新的等价类 $cur$ 即可。</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!p) t[cur].link = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+<p>如果遍历完原串 $s$ 的所有后缀，它们接上 $x$ 都没有在原串中出现过，那么 $s$ 的所有后缀接上 $x$ 都在同一个等价类中，它们的 $\operatorname{endpos}$ 都只有为 $|s|+1$ 这一个元素。直接将这个等价类的 $\operatorname{link}$ 指向 $t_0$ 即可。 </p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> q = t[p].ch[x];</span><br></pre></td></tr></table></figure>
+<p>否则，我们在 $p$ 向上跳的过程中，找到了一个等价类，其中的字符串接上 $x$ 在原串中出现过。记 $q$ 为 $p$ 沿着权值为 $x$ 的转移走到的节点。</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (t[p].len + <span class="number">1</span> == t[q].len) t[cur].link = q;</span><br></pre></td></tr></table></figure>
+<p>在这里我们做了一个判断：$\operatorname{len}(p)+1=\operatorname{len}(q)$。如果这个条件满足，说明等价类 $q$ 中只含有一个字符串，这个字符串即为 $\operatorname{longest}(p)+x$。此时将新建的等价类的 $\operatorname{link}$ 指向 $q$ 即可。</p>
+<hr>
+<p>否则，$\operatorname{len}(p)+1\neq\operatorname{len}(q)$。我们知道，$\operatorname{shortest}(q)=\operatorname{longest}(p)+x$。所以 $\operatorname{shortest}(q)$ 的 $\operatorname{endpos}$ 在原串的基础上增加了 $|s|+1$ 这一个值，而 $q$ 中其它字符串的 $\operatorname{endpos}$ 均未发生改变。</p>
+<p>也就是说字符串加入 $x$ 后，$q$ 中的字符串的 $\operatorname{endpos}$ 不相同了。为了使每个节点的 $\operatorname{endpos}$ 相同，我们需要把 $q$ 拆分成两个等价类，一个只包含 $\operatorname{shortest}(q)$，另一个包含 $q$ 中的其他字符串。</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> nw = ++tot;</span><br><span class="line">t[nw] = t[q];</span><br><span class="line">t[nw].len = t[p].len + <span class="number">1</span>;</span><br><span class="line">t[q].link = t[cur].link = nw;</span><br></pre></td></tr></table></figure>
+<p>我们新建一个编号为 $nw$ 的节点，它只包含 $\operatorname{shortest}(q)$。它的出边和 $\operatorname{link}$ 应与原先 $q$ 的相同，所以先让 <code>t[nw] = t[q]</code>。现在的 $q$ 应包含除 $\operatorname{shortest}(q)$ 以外的字符串。</p>
+<p>然后计算 $\operatorname{len}(nw)$，显然它等于 $\operatorname{len}(p)+1$。</p>
+<p>最后，$q$ 和 $cur$ 的 $\operatorname{link}$ 都应连向 $nw$。</p>
+<hr>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (p &amp;&amp; t[p].ch[x] == q) t[p].ch[x] = nw, p = t[p].link;</span><br></pre></td></tr></table></figure>
+<p>最后，$p$ 的某些后缀的权值为 $x$ 的转移可能指向 $q$，我们应该将他指向 $nw$。</p>
+<p>至此，SAM 的就构建完了。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/geometry/" rel="prev" title="计算几何">
+                  <i class="fa fa-chevron-left"></i> 计算几何
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="waline"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FQR_的博客</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/katex.min.css" integrity="sha256-oWCabCfPd4Oi21wqZezBSz/anto4VYcJqc9sM9IzQTk=" crossorigin="anonymous">
+
+
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline.fqr-qwq.cn","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"locale":{"placeholder":"欢迎评论~"},"avatar":"mm","meta":["nick","mail"],"requiredMeta":["nick"],"pageSize":10,"visitor":true,"comment_count":true,"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","login":"enable","el":"#waline","comment":true,"path":"/post/string/"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '20px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#fff',
+  buttonColorLight: '#100f2c',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+</body>
+</html>
