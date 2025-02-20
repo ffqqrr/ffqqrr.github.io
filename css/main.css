@@ -2996,3 +2996,6 @@ blockquote {
 details {
   cursor: pointer;
 }
+.katex-block {
+  overflow-x: auto;
+}
