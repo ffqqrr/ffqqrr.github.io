@@ -32,46 +32,46 @@ It also uses local storage by default, so your last setting will be remembered!<
 <p>Darkmode.js is very easy to use, just copy-paste the following code or use the npm package.</p>
 <h3 id="easy-way-using-the-jsdelivr-cdn"><a class="markdownIt-Anchor" href="#easy-way-using-the-jsdelivr-cdn"></a> 🚀 Easy way (using the JSDelivr CDN)</h3>
 <p>Just add this code to your HTML page:</p>
-<pre class="highlight"><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript">
-  <span class="hljs-keyword">function</span> <span class="hljs-title function_">addDarkmodeWidget</span>(<span class="hljs-params"></span>) {
-    <span class="hljs-keyword">new</span> <span class="hljs-title class_">Darkmode</span>().<span class="hljs-title function_">showWidget</span>();
+<pre class="highlight"><code class="html"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
+<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript">
+  <span class="keyword">function</span> <span class="title function_">addDarkmodeWidget</span>(<span class="params"></span>) {
+    <span class="keyword">new</span> <span class="title class_">Darkmode</span>().<span class="title function_">showWidget</span>();
   }
-  <span class="hljs-variable language_">window</span>.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&#x27;load&#x27;</span>, addDarkmodeWidget);
-</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, addDarkmodeWidget);
+</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>
 </code></pre>
 <h3 id="using-npm"><a class="markdownIt-Anchor" href="#using-npm"></a> 📦 Using NPM</h3>
 <pre class="highlight"><code class="sh">npm install darkmode-js
 </code></pre>
 <p>Then add the following JavaScript code:</p>
-<pre class="highlight"><code class="javascript"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Darkmode</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;darkmode-js&#x27;</span>;
+<pre class="highlight"><code class="javascript"><span class="keyword">import</span> <span class="title class_">Darkmode</span> <span class="keyword">from</span> <span class="string">&#x27;darkmode-js&#x27;</span>;
 
-<span class="hljs-keyword">new</span> <span class="hljs-title class_">Darkmode</span>().<span class="hljs-title function_">showWidget</span>();
+<span class="keyword">new</span> <span class="title class_">Darkmode</span>().<span class="title function_">showWidget</span>();
 </code></pre>
 <h2 id="️-options"><a class="markdownIt-Anchor" href="#️-options"></a> ⚙️ Options</h2>
 <p>Here are the option availables:</p>
-<pre class="highlight"><code class="javascript"><span class="hljs-keyword">const</span> options = {
-  <span class="hljs-attr">bottom</span>: <span class="hljs-string">&#x27;64px&#x27;</span>, <span class="hljs-comment">// default: &#x27;32px&#x27;</span>
-  <span class="hljs-attr">right</span>: <span class="hljs-string">&#x27;unset&#x27;</span>, <span class="hljs-comment">// default: &#x27;32px&#x27;</span>
-  <span class="hljs-attr">left</span>: <span class="hljs-string">&#x27;32px&#x27;</span>, <span class="hljs-comment">// default: &#x27;unset&#x27;</span>
-  <span class="hljs-attr">time</span>: <span class="hljs-string">&#x27;0.5s&#x27;</span>, <span class="hljs-comment">// default: &#x27;0.3s&#x27;</span>
-  <span class="hljs-attr">mixColor</span>: <span class="hljs-string">&#x27;#fff&#x27;</span>, <span class="hljs-comment">// default: &#x27;#fff&#x27;</span>
-  <span class="hljs-attr">backgroundColor</span>: <span class="hljs-string">&#x27;#fff&#x27;</span>,  <span class="hljs-comment">// default: &#x27;#fff&#x27;</span>
-  <span class="hljs-attr">buttonColorDark</span>: <span class="hljs-string">&#x27;#100f2c&#x27;</span>,  <span class="hljs-comment">// default: &#x27;#100f2c&#x27;</span>
-  <span class="hljs-attr">buttonColorLight</span>: <span class="hljs-string">&#x27;#fff&#x27;</span>, <span class="hljs-comment">// default: &#x27;#fff&#x27;</span>
-  <span class="hljs-attr">saveInCookies</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">// default: true,</span>
-  <span class="hljs-attr">label</span>: <span class="hljs-string">&#x27;🌓&#x27;</span>, <span class="hljs-comment">// default: &#x27;&#x27;</span>
-  <span class="hljs-attr">autoMatchOsTheme</span>: <span class="hljs-literal">true</span> <span class="hljs-comment">// default: true</span>
+<pre class="highlight"><code class="javascript"><span class="keyword">const</span> options = {
+  <span class="attr">bottom</span>: <span class="string">&#x27;64px&#x27;</span>, <span class="comment">// default: &#x27;32px&#x27;</span>
+  <span class="attr">right</span>: <span class="string">&#x27;unset&#x27;</span>, <span class="comment">// default: &#x27;32px&#x27;</span>
+  <span class="attr">left</span>: <span class="string">&#x27;32px&#x27;</span>, <span class="comment">// default: &#x27;unset&#x27;</span>
+  <span class="attr">time</span>: <span class="string">&#x27;0.5s&#x27;</span>, <span class="comment">// default: &#x27;0.3s&#x27;</span>
+  <span class="attr">mixColor</span>: <span class="string">&#x27;#fff&#x27;</span>, <span class="comment">// default: &#x27;#fff&#x27;</span>
+  <span class="attr">backgroundColor</span>: <span class="string">&#x27;#fff&#x27;</span>,  <span class="comment">// default: &#x27;#fff&#x27;</span>
+  <span class="attr">buttonColorDark</span>: <span class="string">&#x27;#100f2c&#x27;</span>,  <span class="comment">// default: &#x27;#100f2c&#x27;</span>
+  <span class="attr">buttonColorLight</span>: <span class="string">&#x27;#fff&#x27;</span>, <span class="comment">// default: &#x27;#fff&#x27;</span>
+  <span class="attr">saveInCookies</span>: <span class="literal">false</span>, <span class="comment">// default: true,</span>
+  <span class="attr">label</span>: <span class="string">&#x27;🌓&#x27;</span>, <span class="comment">// default: &#x27;&#x27;</span>
+  <span class="attr">autoMatchOsTheme</span>: <span class="literal">true</span> <span class="comment">// default: true</span>
 }
 
-<span class="hljs-keyword">const</span> darkmode = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Darkmode</span>(options);
-darkmode.<span class="hljs-title function_">showWidget</span>();
+<span class="keyword">const</span> darkmode = <span class="keyword">new</span> <span class="title class_">Darkmode</span>(options);
+darkmode.<span class="title function_">showWidget</span>();
 </code></pre>
 <h2 id="️-methods"><a class="markdownIt-Anchor" href="#️-methods"></a> ▶️ Methods</h2>
 <p>If you don't want to show the widget and enable/disable Darkmode programatically you can use the method <code>toggle()</code>. You can also check if the Dark Mode is activated with the method <code>isActivated()</code>. See them in action in the following example:</p>
-<pre class="highlight"><code class="javascript"><span class="hljs-keyword">const</span> darkmode =  <span class="hljs-keyword">new</span> <span class="hljs-title class_">Darkmode</span>();
-darkmode.<span class="hljs-title function_">toggle</span>();
-<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(darkmode.<span class="hljs-title function_">isActivated</span>()) <span class="hljs-comment">// will return true</span>
+<pre class="highlight"><code class="javascript"><span class="keyword">const</span> darkmode =  <span class="keyword">new</span> <span class="title class_">Darkmode</span>();
+darkmode.<span class="title function_">toggle</span>();
+<span class="variable language_">console</span>.<span class="title function_">log</span>(darkmode.<span class="title function_">isActivated</span>()) <span class="comment">// will return true</span>
 </code></pre>
 <h2 id="override-style"><a class="markdownIt-Anchor" href="#override-style"></a> Override style</h2>
 <ul>
@@ -81,24 +81,24 @@ darkmode.<span class="hljs-title function_">toggle</span>();
 <li>It is also possible to revert the Dark Mode with this style <code>mix-blend-mode: difference;</code></li>
 </ul>
 <h3 id="examples"><a class="markdownIt-Anchor" href="#examples"></a> Examples</h3>
-<pre class="highlight"><code class="css"><span class="hljs-selector-class">.darkmode--activated</span> <span class="hljs-selector-tag">p</span>, <span class="hljs-selector-class">.darkmode--activated</span> <span class="hljs-selector-tag">li</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-number">#000</span>;
+<pre class="highlight"><code class="css"><span class="selector-class">.darkmode--activated</span> <span class="selector-tag">p</span>, <span class="selector-class">.darkmode--activated</span> <span class="selector-tag">li</span> {
+  <span class="attribute">color</span>: <span class="number">#000</span>;
 }
 
-<span class="hljs-selector-class">.button</span> {
-  <span class="hljs-attribute">isolation</span>: isolate;
+<span class="selector-class">.button</span> {
+  <span class="attribute">isolation</span>: isolate;
 }
 
-<span class="hljs-selector-class">.darkmode--activated</span> <span class="hljs-selector-class">.logo</span> {
-  <span class="hljs-attribute">mix-blend-mode</span>: difference;
+<span class="selector-class">.darkmode--activated</span> <span class="selector-class">.logo</span> {
+  <span class="attribute">mix-blend-mode</span>: difference;
 }
 </code></pre>
-<pre class="highlight"><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;darkmode-ignore&quot;</span>&gt;</span>😬<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+<pre class="highlight"><code class="html"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;darkmode-ignore&quot;</span>&gt;</span>😬<span class="tag">&lt;<span class="name">span</span>&gt;</span>
 </code></pre>
 <h2 id="debug"><a class="markdownIt-Anchor" href="#debug"></a> Debug</h2>
 <p>If it does not work you may have to add the following code, but this will invalidate the classes to override.</p>
-<pre class="highlight"><code class="css"><span class="hljs-selector-class">.darkmode-layer</span>, <span class="hljs-selector-class">.darkmode-toggle</span> {
-  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">500</span>;
+<pre class="highlight"><code class="css"><span class="selector-class">.darkmode-layer</span>, <span class="selector-class">.darkmode-toggle</span> {
+  <span class="attribute">z-index</span>: <span class="number">500</span>;
 }
 </code></pre>
 <h2 id="browser-compatibility"><a class="markdownIt-Anchor" href="#browser-compatibility"></a> Browser compatibility</h2>
